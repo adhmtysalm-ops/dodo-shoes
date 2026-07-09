@@ -1,0 +1,25 @@
+import type { Config } from 'tailwindcss'
+
+export default {
+  content: [
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './app.vue',
+    './error.vue'
+  ],
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          black: '#000000',
+          white: '#ffffff',
+          red: '#ff3131',
+          gray: '#f5f5f5'
+        }
+      }
+    }
+  },
+  plugins: []
+} satisfies Config
