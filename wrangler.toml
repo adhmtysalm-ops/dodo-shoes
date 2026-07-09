@@ -15,7 +15,8 @@ enabled = true
 [[d1_databases]]
 binding = "DB"
 database_name = "dodo-shoes-db"
-database_id = "your-database-id-here"
+database_id = "00636dd2-ac1f-417e-bc2a-1a5d0d3e16d1"
+migrations_dir = "drizzle"
 # bucket_name = "my-bucket"
 
 # [[d1_databases]]

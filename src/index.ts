@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 
-import { authRouter, cartsRouter, categoriesRouter, helloRouter, ordersRouter, productsRouter } from "@/routes";
+import { authRouter, cartsRouter, categoriesRouter, ordersRouter, productsRouter } from "@/routes";
 
 export type Bindings = {
   SECRET_KEY: string;
@@ -9,7 +9,7 @@ export type Bindings = {
 
 const app = new Hono<{ Bindings: Bindings }>();
 
-app.basePath("/api").route("/", helloRouter);
+
 app.basePath("/api/auth").route("/", authRouter);
 app.basePath("/api/categories").route("/", categoriesRouter);
 app.basePath("/api/products").route("/", productsRouter);
