@@ -1,2 +1,0 @@
-SECRET_KEY=value
-DB_URL = database_connection_string
