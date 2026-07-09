@@ -11,6 +11,18 @@ type Product = {
   description: string;
 };
 
+export async function generateStaticParams() {
+  try {
+    const res = await fetch(`${API_URL}/api/products`);
+    const products = await res.json();
+    return products.map((p: any) => ({
+      id: p.id.toString(),
+    }));
+  } catch (err) {
+    return [{ id: '1' }, { id: '2' }, { id: '3' }];
+  }
+}
+
 export default function ProductDetails() {
   const params = useParams();
   const [product, setProduct] = useState<Product | null>(null);
