@@ -22,9 +22,6 @@
           <NuxtLink to="#shop" class="bg-brand-white text-brand-black px-10 py-4 rounded-full font-bold uppercase hover:bg-gray-200 transition-colors text-center">
             تسوق التشكيلة
           </NuxtLink>
-          <NuxtLink to="/" class="bg-transparent border-2 border-brand-white text-brand-white px-10 py-4 rounded-full font-bold uppercase hover:bg-white/10 transition-colors text-center">
-            شاهد الفيديو
-          </NuxtLink>
         </div>
       </div>
     </div>
@@ -33,7 +30,6 @@
     <div id="shop" class="max-w-7xl mx-auto px-6 py-24">
       <div class="flex justify-between items-end mb-12">
         <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tight">الرائج الآن</h2>
-        <NuxtLink to="/" class="hidden md:block font-bold hover:text-brand-red transition-colors">عرض الكل</NuxtLink>
       </div>
 
       <div v-if="pending" class="py-20 text-center font-bold">جاري تحميل المنتجات...</div>
