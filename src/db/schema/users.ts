@@ -4,7 +4,7 @@ import { createInsertSchema, createSelectSchema } from "drizzle-zod";
 export const usersTable = sqliteTable("users", {
   id: integer("id", { mode: "number" }).primaryKey({ autoIncrement: true }),
   name: text("name").notNull(),
-  email: text("email").notNull().unique(),
+  phone: text("phone").notNull().unique(),
   password_hash: text("password_hash").notNull(),
   role: text("role", { enum: ["admin", "customer"] }).default("customer").notNull(),
   created_at: integer("created_at", { mode: "timestamp" }).notNull(),

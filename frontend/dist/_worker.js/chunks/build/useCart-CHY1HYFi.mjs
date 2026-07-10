@@ -1,0 +1,2 @@
+import{v as a}from"./server.mjs";const e=a.ref([]),t=a.ref(!1),useCart=()=>{t.value;const removeFromCart=a=>{e.value=e.value.filter(e=>e.id!==a)};return{cart:e,addToCart:a=>{const t=e.value.find(e=>e.id===a.id);t?t.quantity+=1:e.value.push({id:a.id,name:a.name,price:a.price,quantity:1})},removeFromCart:removeFromCart,updateQuantity:(a,t)=>{const r=e.value.find(e=>e.id===a);r&&t>0?r.quantity=t:0===t&&removeFromCart(a)},clearCart:()=>{e.value=[]}}};export{useCart as u};
+//# sourceMappingURL=useCart-CHY1HYFi.mjs.map

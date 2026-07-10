@@ -25,3 +25,13 @@
     </main>
   </div>
 </template>
+
+<script setup lang="ts">
+const { isAdmin } = useAuth()
+
+onMounted(() => {
+  if (!isAdmin.value) {
+    navigateTo('/login')
+  }
+})
+</script>
