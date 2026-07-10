@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import { cors } from "hono/cors";
 
 import { authRouter, cartsRouter, categoriesRouter, ordersRouter, productsRouter } from "@/routes";
 
@@ -8,6 +9,8 @@ export type Bindings = {
 };
 
 const app = new Hono<{ Bindings: Bindings }>();
+
+app.use("/api/*", cors());
 
 
 app.basePath("/api/auth").route("/", authRouter);
